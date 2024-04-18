@@ -60,7 +60,7 @@ h2 span{
 p{
   color: #989bb4;
   margin: 1rem 0 1rem 0;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 .btn button{
   border-radius: 5px;
@@ -368,18 +368,26 @@ header .img{
 .testimonials .box p {
   padding: 0 2rem 0 2rem ;
 }
+.contact-us{
+  margin-bottom: 6rem;
+}
 .contact-us .container{
   display: flex;
   flex-direction: row;
 }
+.contact-us .contact{
+  padding: 3rem;
+  width: 35%;
+}
 .contact-us .drop{
   padding: 2rem;
+  width: 40%;
 }
 .contact-us .drop form .form{
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 .contact-us .drop form .form input{
   border: 1px solid var(--grey-color);
@@ -388,21 +396,32 @@ header .img{
   padding: 0 .5rem ;
 }
 .contact-us .drop form .form input:focus{
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--secondary-color);
 }
-.contact-us .drop form .form .label{
+.contact-us .drop .label{
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  color: var(--primary-color);
 }
-.contact-us .drop form .form .label:nth-child(3) input{
+.contact-us .drop form textarea{
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
   height: 5rem;
+  padding: .5rem ;
+  margin-bottom: 1rem;
+}
+.contact-us .drop form textarea:focus{
+  border: 2px solid var(--secondary-color);
+}
+.contact-us .drop form button{
+  /* cursor: ; */
 }
 .footer {
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
   background-size: cover; 
-  padding: 4rem 0 2rem 0;
+  padding: 6rem 0 2rem 0;
   margin-top: 4rem;
 }
 .footer .container .allReferences{
@@ -425,6 +444,7 @@ header .img{
   color: #eee;
   font-size: 1rem;
   transition: .3s;
+  line-height: 2.5;
 }
 .footer .container .allReferences .references a:hover{
   text-decoration: underline;
@@ -433,7 +453,7 @@ header .img{
   display: flex;
   align-items: center;
   color: var(--white-color);
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 .footer .container .allReferences .line i {
   color: var(--white-color);
@@ -481,6 +501,31 @@ header .img{
 .development .images img{
   width: 3.5rem;
 }
+/* project page  */
+#contact .contact{
+  background-color: #001220;
+  border-radius: 1rem;
+}
+#contact .contact h2,
+#contact .contact h3,
+#contact .contact h4,
+#contact .contact p{
+  color: #ccd0d2;
+}
+#select{
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0 .5rem ;
+  text-align: end;
+  color: var(--grey-color);
+}
+#select option{
+  color: #808383;
+}
+#select:focus{
+  border: 2px solid var(--secondary-color);
+}
 /* make the website responsive */
 @media screen and (max-width: 1024px) {
     .container{
@@ -494,4 +539,4 @@ header .img{
     .container {
       width: 98%;
     }
-  }
+}

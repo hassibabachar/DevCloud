@@ -8,6 +8,7 @@
     <title>DevCloud</title>
 </head>
 <body>
+
 <header> 
     <div class="container">
         <div class="img">
@@ -18,9 +19,9 @@
         </div>
         <nav>
             <ul class="links">
-                <a href="index.html"><li>Home</li></a>
+                <a href="index.html"><li class="active">Home</li></a>
                 <a href="service.html"><li>Service</li></a>
-                <a href="marketing.html"><li class="active">Marketing</li></a>
+                <a href="marketing.html"><li>Marketing</li></a>
                 <a href="hosting.html"><li>Hosting</li></a>
                 <div class="btn">
                     <button type="button" class="button">Get In Touch</button>
@@ -31,43 +32,65 @@
     </div>
 </header>
 
-<section class="services section">
+<section id="contact" class="contact-us section">
     <div class="container">
-        <div class="descrb">
-            <h3>DIGITAL MARKETING</h3>
-            <h1>We Help Brands With</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae molestias quia sit itaque possimus non ipsum? Cupiditate.</p>
+        <div class="contact">
+            <h3>GET IN TOUCH</h3>
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <div class="phone">
+                <h4>Phone</h4>
+                <p>+213 25 45 98 45</p>
+            </div>
+            <div class="email">
+                <h4>Send Email</h4>
+                <p>email@example.com</p>
+                <p>email@website.com</p>
+            </div>
+            <div class="address">
+                <h4>Phone</h4>
+                <p>No.864 - Cité 924 lots , M'Sila 28020, Algerie</p>
+            </div>
         </div>
-        <div class="development">
-            <div class="Describtion">
-                <h2><span>SEO</span> Optimisation</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam asperiores numquam ex consequatur soluta corporis deserunt pariatur quidem sequi, magni, fugit porro quos recusandae odit tempora neque necessitatibus corrupti. Fugiat, consequatur.</p>
-            </div>
-            <div class="image">
-                <img src="assets/images/marketing/seo.png" alt="">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="services">
-    <div class="container">
-        <div class="development">
-            <div class="image">
-                <img src="assets/images/marketing/marketing.png" alt="">
-            </div>
-            <div class="Describtion">
-                <h2>Facebook & instagram</h2>
-                <h2><span>Marketing</span></h2>
-                <div class="images">
-                    <img src="assets/images/marketing/facebook.png" alt="">
-                    <img src="assets/images/marketing/instagram.png" alt="">
+        <div class="drop">
+            <h2>Interested in a collaboration?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <form action="">
+                <div class="form">
+                    <div class="label">
+                        <label for="">Your Name</label>
+                        <input type="name" required>
+                    </div>
+                    <div class="label">
+                        <label for="email">Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="label">
+                        <label for="">Project</label>
+                        <select name="" id="select">
+                            <option value="">Yakol</option>
+                            <option value="">Flexy</option>
+                            <option value="">Logistic</option>
+                            <option value="">E-Payment</option>
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for="">Your Interest</label>
+                        <select name="" id="select">
+                            <option value="">Collaborator</option>
+                            <option value="">Invester</option>
+                            <option value="">Co-Founder</option>
+                        </select>
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam asperiores numquam ex consequatur soluta corporis deserunt pariatur quidem sequi, magni, fugit porro quos recusandae odit tempora neque necessitatibus corrupti. Fugiat, consequatur.</p>
+                <div class="label">
+                        <label for="text">Message</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
                 <div class="btn">
-                    <a href=""><button type="button" class="button1">See More</button></a>
+                    <button type="button" class="button1">Send Message</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </section>
