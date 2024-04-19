@@ -1,4 +1,10 @@
-    let testSlide = document.querySelectorAll('.testItem');
+hamburger = document.querySelector(".hamburger");
+nav = document.querySelector("nav");
+hamburger.onclick = function() {
+	nav.classList.toggle("active");
+}
+	
+	let testSlide = document.querySelectorAll('.testItem');
 	let dots = document.querySelectorAll('.dot');
 
 	var counter = 0;
