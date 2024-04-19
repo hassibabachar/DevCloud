@@ -24,24 +24,28 @@
                 <a href="marketing.html"><li>Marketing</li></a>
                 <a href="hosting.html"><li>Hosting</li></a>
                 <div class="btn">
-                    <button type="button" class="button">Get In Touch</button>
-                    <button type="button" class="">Language <i class="ri-arrow-down-s-line dropdown__arrow"></i></button>
+                    <a href="#contact-us"><button type="button" class="button">Get In Touch</button></a>
+                    <select name="" id="Language">
+                        <option value="">Language</option>
+                        <option value="">English</option>
+                        <option value="">Arabic</option>
+                    </select>
                 </div>
             </ul>
         </nav>
     </div>
 </header>
 
-<section id="home" class="home">
+<section class="LandingPage">
     <div class="container">
         <div class="Describtion">
-            <h3>WELCOME TO DEVCLOUD</h3>
+            <h3>welcome to devcloud</h3>
             <h1>Designers, Front-end </h1>
             <h1><span> Developers & Mentors </span></h1>
             <p>we design and code beautifully simple things, and we love what we do. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ex? Deleniti, dicta.</p>
             <div class="btn">
-                <a href=""><button type="button" class="button"><a href="project.html">Start a Project</a></button></a>
-                <a href=""><button type="button" class="button1"><a href="collaboration.html">Collaboration</a></button></a>
+                <a href="project.html"><button type="button" class="button">Start a Project</button></a>
+                <a href="collaboration.html"><button type="button" class="button1">Collaboration</button></a>
             </div>
         </div>
         <div class="image">
@@ -52,8 +56,8 @@
 
 <section class="brands section">
     <div class="container">
-        <div class="descrb">
-        <h3>BRANDS</h3>
+        <div class="title">
+        <h3>brands</h3>
         <h1>We are proud to have collaborated with some</h1>
         <h1>awesome companies</h1>
         </div>
@@ -72,8 +76,8 @@
 
 <section class="team section">
     <div class="container">
-        <div class="descrb">
-        <h3>OUR TEAM</h3>
+        <div class="title">
+        <h3>our team</h3>
         <h1>Teamwork Makes the Dream Work</h1>
         </div>
         <div class="work">
@@ -104,55 +108,45 @@
 
 <section class="projects section">
     <div class="container">
-        <div class="descrb">
-        <h3>PROJECTS</h3>
+        <div class="title">
+        <h3>projects</h3>
         <h1>Our Recent Work</h1>
         </div>
-        <div class="project">
-            <a href="https://mutab.it/" target="_blank">
-                <div class="box">
-                    <div class="img">
-                        <img src="assets/images/pexels-photo-590493.webp" alt="">
-                    </div>
+        <div class="cards">
+            <div class="card">
+                <article class="article">
+                    <img src="assets/images/Mutab.webp" alt="image" class="img">
                     <div class="content">
-                        <h3>Mutab</h3>
-                        <h2>The Arab Library</h2>
+                    <h3><a href="https://mutab.it/" target="_blank" class="button">Mutab</a></h3>
+                    <h2>The Arab Library</h2>
                     </div>
-                </div>
-            </a>
-            <a href="https://chargily.com/" target="_blank">
-                <div class="box" target="_blank">
-                    <div class="img">
-                        <img src="assets/images/money-card-business-credit-card-50987.webp" alt="">
-                    </div>
+                </article>
+                <article class="article">
+                    <img src="assets/images/Chargily.webp" alt="image" class="img">
                     <div class="content">
-                        <h3>Chargily</h3>
-                        <h2>Recharge Mobile</h2>
+                    <h3><a href="https://chargily.com/" target="_blank" class="button">Chargily</a></h3>
+                    <h2>Recharge Mobile</h2>
                     </div>
-                </div>
-            </a>
-            <a href="https://www.dood.com/fr/" target="_blank">
-                <div class="box" target="_blank">
-                    <div class="img">
-                        <img src="assets/images/pexels-photo-3184192.jpeg" alt="">
-                    </div>
+                </article>
+                <article class="article">
+                    <img src="assets/images/Yakool.jpeg" alt="image" class="img">
                     <div class="content">
-                        <h3>Yakool</h3>
-                        <h2>Restaurants near you</h2>
+                    <h3><a href="https://www.dood.com/fr/" target="_blank" class="button">Yakool</a></h3>
+                    <h2>Restaurants near you</h2>
                     </div>
-                </div>
-            </a>
+                </article>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="conversation section">
     <div class="container">
-        <div class="descrb">
+        <div class="title">
             <h1>Start a Project</h1>
             <p>Interested in working together? We should queue up a chat. I'll buy the coffee.</p>
-            <div class="">
-                <button type="button">Start a conversation</button>
+            <div class="btn">
+                <a href="#contact-us"><button type="button">Start a conversation</button></a>
             </div>
         </div>
     </div>
@@ -160,8 +154,8 @@
 
 <section class="products section">
     <div class="container">
-        <div class="descrb">
-            <h3>PRODUCTS</h3>
+        <div class="title">
+            <h3>products</h3>
             <h1>Our Startup Projects</h1>
         </div>
         <div class="product">
@@ -176,9 +170,12 @@
                 </div>
                 <div class="content">
                     <h2>Basic Plan</h2>
-                    <p>Strategy & Research</p>
-                    <p>Bussiness & Finance Analysing</p>
-                    <p>SEO Optimization</p>
+                    <p>1GB Storage Space</p>
+                    <p>10GB Mounthly Brandwidth</p>
+                    <p>10 Sub Domains</p>
+                    <p>25 Email Accounts</p>
+                    <p>Control Panel</p>
+                    <p>24/7 Support</p>
                     <div class="btn">
                         <button type="button">Get Started</button>
                     </div>
@@ -194,10 +191,13 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h2>Basic Plan</h2>
-                    <p>Strategy & Research</p>
-                    <p>Bussiness & Finance Analysing</p>
-                    <p>SEO Optimization</p>
+                    <h2>Professional Plan</h2>
+                    <p>5GB Storage Space</p>
+                    <p>50GB Mounthly Brandwidth</p>
+                    <p>20 Sub Domains</p>
+                    <p>50 Email Accounts</p>
+                    <p>Control Panel</p>
+                    <p>24/7 Support</p>
                     <div class="btn">
                         <button type="button">Get Started</button>
                     </div>
@@ -213,10 +213,13 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h2>Basic Plan</h2>
-                    <p>Strategy & Research</p>
-                    <p>Bussiness & Finance Analysing</p>
-                    <p>SEO Optimization</p>
+                    <h2>Premium Plan</h2>
+                    <p>5GB Storage Space</p>
+                    <p>50GB Mounthly Brandwidth</p>
+                    <p>20 Sub Domains</p>
+                    <p>50 Email Accounts</p>
+                    <p>Control Panel</p>
+                    <p>24/7 Support</p>
                     <div class="btn">
                         <button type="button">Get Started</button>
                     </div>
@@ -228,43 +231,48 @@
 
 <section class="testimonials section">
     <div class="container">
-        <div class="descrb">
-            <h3>TESTIMONIALS</h3>
+        <div class="title">
+            <h3>testimonials</h3>
             <h1>What Our Client's Say</h1>
         </div>
     </div>
     <div class="testimonial">
-        <div class="box">
-            <img src="assets/images/user-1.jpg" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat suscipit earum consequuntur dolorum quae mollitia corrupti, accusamus magnam et, reiciendis ut necessitatibus rerum, vero velit officia eaque aspernatur iure. Velit?</p>
-            <div class="content">
-                <h2>John Doe</h2>
-                <h3>Customer</h3>
+        <div class="container">
+            <div class="contents-wraper">       
+                <section class="testRow">
+                    <div class="testItem active">
+                        <img src="assets/images/user-1.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h2>Jane Doe</h2>
+                        <h3>Customer</h3>
+                    </div>
+                    <div class="testItem active">
+                        <img src="assets/images/user-2.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h2>Jane Doe</h2>
+                        <h3>Customer</h3>
+                    </div>
+                    <div class="testItem active">
+                        <img src="assets/images/user-3.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h2>Jane Doe</h2>
+                        <h3>Customer</h3>
+                    </div>
+                </section>
+                <section class="indicators">
+                    <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                </section>
             </div>
         </div>
-        <!-- <div class="box">
-            <img src="assets/images/user-2.jpg" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat suscipit earum consequuntur dolorum quae mollitia corrupti, accusamus magnam et, reiciendis ut necessitatibus rerum, vero velit officia eaque aspernatur iure. Velit?</p>
-            <div class="content">
-                <h2>John Doe</h2>
-                <h3>Customer</h3>
-            </div>
-        </div> -->
-        <!-- <div class="box">
-            <img src="assets/images/user-3.jpg" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat suscipit earum consequuntur dolorum quae mollitia corrupti, accusamus magnam et, reiciendis ut necessitatibus rerum, vero velit officia eaque aspernatur iure. Velit?</p>
-            <div class="content">
-                <h2>John Doe</h2>
-                <h3>Customer</h3>
-            </div>
-        </div> -->
     </div>
 </section>
 
-<section class="contact-us section">
+<section id="contact-us" class="contact-us section">
     <div class="container">
         <div class="contact">
-            <h3>GET IN TOUCH</h3>
+            <h3>get in touch</h3>
             <h2>Contact</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
             <div class="phone">
@@ -314,7 +322,7 @@
             <p>Pioneering force in enterprise solutions, specializing in SaaS services, web development, mobile applications, and graphic design. With unmatched expertise, we elevate your digital presence, delivering cutting-edge solutions tailored to your business needs</p>
             <ul class="social">
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/Chargily/" class="facebook">
+                    <a target="_blank" href="https://www.facebook.com/devcloud.dz" class="facebook">
                     <i class="fab fa-facebook-f"></i>
                     </a>
                 </li>
@@ -324,13 +332,13 @@
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.instagram.com/Chargily/" class="instagram">
-                    <i class="fab fa-instagram"></i>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B213558261258&text&type=phone_number&app_absent=0" class="github">
+                    <i class="fab fa-whatsapp"></i>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://github.com/Chargily" class="github">
-                    <i class="fab fa-github"></i>
+                    <a target="_blank" href="https://www.instagram.com/devcloud.dz/" class="instagram">
+                    <i class="fab fa-instagram"></i>
                     </a>
                 </li>
             </ul>
@@ -339,15 +347,15 @@
             <h2>Contact</h2>
             <div class="line">
                 <i class="fas fa-phone-volume fa-fw"></i>
-                <div>+213 (0) 982 423 423</div>
+                <div>+213 58 26 12 58</div>
             </div>
             <div class="line">
                 <i class="fa-solid fa-envelope"></i>
-                <div>support@chargily.com</div>
+                <div>contact@devcloud.dz</div>
             </div>
             <div class="line">
-                <a href="https://www.google.com/maps/place/35%C2%B042'20.6%22N+4%C2%B032'06.7%22E/@35.7057265,4.5326195,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.7057222!4d4.5351944?entry=ttu"><i class="fas fa-map-marker-alt fa-fw"></i></i></a>
-                <div>M'sila, Algeria (DZ)</div>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                <div>No.864 - Cité 924 lots , M'Sila 28020, Algerie</div>
             </div>
         </div>
         <div class="allReferences">
@@ -364,5 +372,7 @@
         <p>Chargily &copy; 2015 - 2024</p>
     </div>
 </footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

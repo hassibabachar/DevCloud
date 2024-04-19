@@ -18,6 +18,9 @@
   outline: none;
   list-style: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 a{
   text-decoration: none;
 }
@@ -25,7 +28,7 @@ body{
   font-family: var(--body-font);
 }
 /* *{ 
-  border: 1px  solid  var(--forth-color) ;
+  border: 1px  solid  red;
 } */
 .container{
   width: 95%;
@@ -50,6 +53,7 @@ h3{
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 h1 span{
   color: var(--third-color);
@@ -83,6 +87,9 @@ p{
 .btn .button1:hover{
     background-color: #f7eef2;
 }
+.title{
+  text-align: center;
+}
 /* make the website responsive */
 @media screen and (max-width: 1024px) {
   .container{
@@ -101,7 +108,7 @@ p{
     width: 98%;
   }
 }
-/* home page */
+/* LandingPage page */
 header {
   top: 0;
   left: 0;
@@ -149,6 +156,18 @@ header .img{
   top: -7rem;
   left: -9rem;
 }
+#Language{
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0 1rem ;
+  text-align: end;
+  margin-left: 1rem;
+  font-size: 17px;
+}
+#Language:focus{
+  border: 2px solid var(--secondary-color);
+}
 /* sections */
 .section {
   margin-top: 7rem;
@@ -157,24 +176,21 @@ header .img{
   display: flex;
   flex-direction: column;
 }
-.home{
+.LandingPage{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
 }
-.home .container{
+.LandingPage .container{
   display: flex;
   justify-content: center;
 }
-.home .image img{
+.LandingPage .image img{
   width: 45rem;
   height: 40rem;
 }
-
-.descrb{
-  text-align: center;
-}
+/* brands section */
 .brands .companies{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -183,6 +199,7 @@ header .img{
 .brands .companies img{
   width: 20rem;
 }
+/* team section */
 .work{
   display: flex;
   /* justify-content: space-between; */
@@ -200,34 +217,90 @@ header .img{
 .work .content{
   padding: 0 2rem 2rem 2rem;
 }
-/* projects */
-.projects{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-  gap: 5rem;
+/* projects section */
+.cards {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
 }
-.projects .project{
-  display: flex;
-  gap: 7rem;
-  margin-top: 4rem;
+.cards .card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
 }
-.projects .project a{
-  height: fit-content;
-  text-decoration: none;
+.cards .article {
+  position: relative;
+  overflow: hidden;
 }
-.projects .project .box img{
+.cards .img {
   width: 20rem;
-  height: 15rem;
+  height: 20rem;
+  border-radius: 1.5rem;
 }
-.projects .project .box .img img{
-  border-radius: .5rem .5rem 0 0;
-}
-.projects .project a .box .content{
-  padding: .5rem;
+.cards .content {
+  width: 18.5rem;
   background-color: var(--white-color);
-  border-radius: 0 0 .5rem .5rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
 }
+.cards .article:hover .content {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+.cards .article:hover {
+  animation: remove-overflow 2s forwards;
+}
+.cards .article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+.cards .article:not(:hover) .content {
+  animation: remove-data 1s forwards;
+}
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+/* conversation section */
 .conversation{
   margin: 10rem 0 10rem 0;
 }
@@ -239,20 +312,20 @@ header .img{
   border-radius: 1rem;
   padding: 1rem;
 }
-.conversation .descrb{
+.conversation .title{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 3rem;
 }
-.conversation .descrb h1{
+.conversation .title h1{
   color: var(--white-color);
   padding: 1rem;
 }
-.conversation .descrb p{
+.conversation .title p{
   padding: .5rem;
 }
-.conversation .descrb button{
+.conversation .title button{
   border-radius: 5px;
   height: 2.7rem;
   font-size: 1.1rem;
@@ -263,6 +336,7 @@ header .img{
   background-color: var(--secondary-color);
   color: var(--white-color);
 }
+/* products section */
 .products .product{
   display: flex;
   gap: 7rem;
@@ -280,17 +354,6 @@ header .img{
   position: relative;
   margin-bottom: 2rem;
 }
-.products .product .box .price .circle{
-  width: 10rem;
-  height: 10rem;
-  left: 15%;
-  border-radius: 50%;
-  border: 4px solid var(--secondary-color);
-  border-top-color: hsla(245, 7%, 65%, .15);
-  transform: rotate(-90deg);
-  transition: transform .5s ease-in-out;
-  position: relative;
-}
 .products .product .box .price .circle::before{
   position: absolute;
   content: "";
@@ -299,6 +362,17 @@ header .img{
   height: 40px;
   border-radius: 50%;
   background-color: var(--secondary-color);
+}
+.products .product .box .price .circle{
+  width: 10rem;
+  height: 10rem;
+  left: 1.5rem;
+  border-radius: 50%;
+  border: 4px solid var(--secondary-color);
+  border-top-color: hsla(200, 61%, 63%, 0.15);
+  transform: rotate(-90deg);
+  transition: transform .5s ease-in-out;
+  position: relative;
 }
 .products .product .box .price .circle::after{
   position: absolute;
@@ -352,22 +426,98 @@ header .img{
 .products .product .box:nth-child(2) button{
   background-color: #dd6b20;
 }
-.testimonials .box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* testimonials section */
+.testimonial .container{
+  position: relative;
+  /* width: 100%; */
+  min-height: 25rem;
+  max-width: 60%;
+}
+.container .contents-wraper{
+  width: 70%;
+  min-height: inherit;
   text-align: center;
-  padding: 2rem;
-  margin:  2rem 25rem 0 25rem;
+}
+.contents-wraper .testRow{
+  /* width: 100%; */
+  min-height: inherit;
+  position: relative;
+  overflow: hidden;
+}
+.testRow .testItem{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testRow .testItem:not(.active){
+  top: 0;
+  left: -100%;
+}
+.testRow .testItem img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  outline-offset: 2px;
+}
+.contents-wraper .indicators{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
   cursor: pointer;
 }
-.testimonials .box img{
+.contents-wraper .indicators .dot{
+  width: .8rem;
+  height: .8rem;
+  margin: 0px 3px;
+  background-color: #ccc;
   border-radius: 50%;
-  width: 6rem;
+  display: inline-block;
+  /* transition: background-color 0.5s ease; */
 }
-.testimonials .box p {
-  padding: 0 2rem 0 2rem ;
+.contents-wraper .indicators .active{
+  background-color: var(--secondary-color);
 }
+@keyframes next1{
+  from{
+    left: 0%;
+  }
+  to{
+    left: -100%;
+  }
+}
+@keyframes next2{
+  from{
+    left: 100%;
+  }
+  to{
+    left: 0%;
+  }
+}
+@keyframes prev1{
+  from{
+    left: 0%;
+  }
+  to{
+    left: 100%;
+  }
+}
+@keyframes prev2{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 0%;
+  }
+}
+/* contact-us section */
 .contact-us{
   margin-bottom: 6rem;
 }
@@ -489,9 +639,9 @@ header .img{
   height: 100%;
   filter: drop-shadow(1px 1px 6px var(--fourth-color));
 }
-.development .Describtion{
+.development .details{
   width: 45%;
-  padding: 12rem 0;
+  padding: 10rem 0;
 }
 /* marketing page */
 .development .images{
@@ -528,15 +678,41 @@ header .img{
 }
 /* make the website responsive */
 @media screen and (max-width: 1024px) {
-    .container{
-      width: 74%;
-    }
-    header nav ul li{
-      display: none;
-    }
+  .container{
+    width: 74%;
   }
-  @media screen and (max-width: 767px) {
-    .container {
-      width: 98%;
-    }
+  header nav ul li{
+    display: none;
+  }
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .testimonial .container {
+    width: 98%;
+  }
+  .container .contents-wraper{
+    width: 90%;
+  }
+  .testRow .testItem p{
+    font-size: 16px;
+    letter-spacing: initial;
+    line-height: initial;
+  }
+  .cards .content {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+
 }
