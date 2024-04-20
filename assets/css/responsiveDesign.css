@@ -1,19 +1,58 @@
-@media screen and (max-width: 1024px) {
-  
-  header nav ul li,
-  #btn{
-    /* visibility: hidden; */
-    display: none;
+@media screen and (max-width: 1200px) {
+  .links {
+    display: block;
+    position: fixed;
+    right: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    border-radius: var(--small-radius);
+    text-align: start;
+    transition: 0.3s;
+    padding: 2rem;
+    z-index: 9999;
   }
-  header .container {
+  .links li{
+    margin-bottom: 2rem;
+    color: var(--white-color);
+  }
+  .links .btn{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+  }
+  .links .btn button,
+  #Language{
+    height: 2rem;
+  }
+  .links .btn .button{
+    background-color: var(--secondary-color);
+  }
+  .links.active {
+    right: 0%;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header .container {
+    justify-content: space-between;
   }
   header .img{
     top: -10rem;
     left: -7rem;
+  }
+  .links a li.active{
+    color: var(--grey-color);
   }
   .Describtion{
     width: 50rem;
@@ -53,11 +92,7 @@
     padding: 0 2rem;
   }
 }
-@media screen and (max-width: 767px) {
-  header nav ul li,
-  #btn{
-    visibility: hidden;
-  }
+@media screen and (max-width: 768px) {
   header .img{
     top: -10rem;
     left: -7rem;
@@ -140,7 +175,6 @@
   .development .image{
     width: 80%;
   }
-  .development .image img{}
   .development .details{
     width: 90%;
     padding: 0;

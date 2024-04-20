@@ -4,7 +4,7 @@
   --primary-color: #322659;
   --secondary-color: #805ad5;
   --third-color: #d53f8c;
-  --fourth-color: #e34766;
+  --fourth-color: #471b24;
   --white-color: #ffffff;
   --grey-color:#b8bacb;
   --body-font: "Inter", sans-serif;
@@ -127,8 +127,8 @@ header nav ul li {
   font-size: 18px;
   font-weight: 400;
 }
-.active{
-  color: var(--fourth-color);
+.links a li.active{
+  color: var(--third-color);
 }
 header nav ul li:hover{
   color: var(--secondary-color);
@@ -151,6 +151,20 @@ header .img{
 }
 #Language:focus{
   border: 2px solid var(--secondary-color);
+}
+.hamburger {
+  display: none;
+  background-color: var(--third-color);
+  padding: .3rem .6rem;
+  border-radius: var(--small-radius);
+}
+.hamburger .bar {
+  display: block;
+  width: 1.5rem;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--white-color);
 }
 /* sections */
 .section {
@@ -536,9 +550,6 @@ header .img{
 .contact-us .drop form textarea:focus{
   border: 2px solid var(--secondary-color);
 }
-.contact-us .drop form button{
-  /* cursor: ; */
-}
 .footer {
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
@@ -654,4 +665,3 @@ header .img{
 #select:focus{
   border: 2px solid var(--secondary-color);
 }
-
